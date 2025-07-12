@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Webflow Dark UI Template</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9fb;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: url('c:\Assignment1\B12A01-landing-launchpad\Assets\Hero-bg.png') center/cover no-repeat;
+
+      padding: 100px 20px 140px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-header {
+      font-weight: bold;
+      color: #3b49df;
+      font-size: 20px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .signup-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #3b49df;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .main-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .cta-button {
+      background: #3b49df;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 40px;
+      align-items: center;
+      background: #fff;
+      flex-wrap: wrap;
+    }
+
+    .text-block {
+      max-width: 50%;
+      min-width: 280px;
+    }
+
+    .text-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .text-block p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .preview-img {
+      max-width: 40%;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      min-width: 280px;
+    }
+
+    .stats {
+      background: #eef1fb;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .stats h3 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .stat-blocks {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3b49df;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .btn {
+      background: #3b49df;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .testimonials {
+      background: #f4f6fd;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      width: 250px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .card .stars {
+      color: #fbc02d;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .card .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card .footer img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    .focus-section {
+      text-align: center;
+      padding: 80px 20px;
+      background: #fff;
+    }
+
+    .focus-section img {
+      max-width: 90%;
+      border-radius: 20px;
+      margin-top: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 80px 40px;
+      background: #f4f6fd;
+    }
+
+    .contact-title {
+      font-size: 36px;
+      font-weight: 700;
+      width: 40%;
+      min-width: 250px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 50%;
+      min-width: 280px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      background: #3b49df;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .footer-logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #3b49df;
+      margin-bottom: 10px;
+    }
+
+    footer nav {
+      margin-top: 20px;
+    }
+
+    footer nav a {
+      margin: 0 10px;
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer p {
+      color: #666;
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .preview-img {
+        max-width: 100%;
+      }
+
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-title,
+      .contact-form {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-header">LOGO</div>
+    <button class="signup-btn">Sign Up</button>
+    <h1 class="main-title">Cool Dark UI Template for <br> Webflow Agencies!</h1>
+    <button class="cta-button">Stay Focused</button>
+  </header>
+
+  <section class="section">
+    <div class="text-block">
+      <h2>See It in Action</h2>
+      <p>Explore the live preview and imagine your brand in this bold new look.</p>
+      <button class="btn">Launch Live Preview</button>
+    </div>
+    <img src="c:\Assignment1\B12A01-landing-launchpad\Assets\wc-mini.png" alt="Webflow Conf 2022" class="preview-img"/>
+  </section>
+
+  <section class="stats">
+    <h3>Joined Thousands of Productive Users</h3>
+    <div class="stat-blocks">
+      <div>
+        <div class="stat">50K</div>
+        <div class="label">Active Users</div>
+      </div>
+      <div>
+        <div class="stat">2M+</div>
+        <div class="label">Focus Sessions</div>
+      </div>
+      <div>
+        <div class="stat">95%</div>
+        <div class="label">Satisfaction Rate</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What our users say</h2>
+    <div class="testimonial-cards">
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <h4>Loved by Designers</h4>
+        <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+        <div class="footer">
+          <img src="c:\Assignment1\B12A01-landing-launchpad\Assets\avatar.png" alt="Reviewer 1">
+          <div>Jannatul<br>Jan 2025</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <h4>Loved by Designers</h4>
+        <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+        <div class="footer">
+          <img src="c:\Assignment1\B12A01-landing-launchpad\Assets\avatar.png" alt="Reviewer 2">
+          <div>Ferdaws<br>Feb 2025</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <h4>Loved by Designers</h4>
+        <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+        <div class="footer">
+          <img src="c:\Assignment1\B12A01-landing-launchpad\Assets\avatar.png" alt="Reviewer 3">
+          <div>Sara<br>Mar 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="focus-section">
+    <h2>Ready to focus better</h2>
+    <p>This template instantly leveled up our presence.” – Studio Vertex</p>
+    <button class="btn">Get Started Free</button>
+    <div>
+      <img src="c:\Assignment1\B12A01-landing-launchpad\Assets\wc-big.png" alt="Webflow Conf Preview">
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-title">Let’s Get in Touch</div>
+    <form class="contact-form">
+      <label>Email</label>
+      <input type="email" placeholder="example@email.com" required>
+      <label>Name</label>
+      <input type="text" placeholder="full name" required>
+      <label>Message</label>
+      <textarea rows="4" placeholder="write your message...." required></textarea>
+      <button type="submit">Get in Touch</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-logo">LOGO</div>
+    <p>Ready to elevate your online presence? Contact us today to discuss your project and discover how we can bring your vision to life.</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">How it Works</a>
+      <a href="#">Services</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
